@@ -94,22 +94,16 @@
     		</div>
     		<div class="dntf">
       			<div class="donate-now">Donate Now</div>
-      			<div class="form">
-        				<div class="inf">
-          					<div class="label">How Much Do You Want to Donate($)?</div>
-          					<div class="infi">
-            						<div class="more">50, 100, 200, 300, 500.......More</div>
-          					</div>
-        				</div>
-        				<div class="inf">
-          					<div class="label">Name</div>
-          					<div class="infi1">
-          					</div>
-        				</div>
-        				<div class="button">
-          					<div class="home">Donate Now</div>
-        				</div>
-      			</div>
+      			<form action="your_donation_handler.php" method="post" id="myform" class="myformd">
+					<label for="food" class="form-label">How Much Do You Want To Donate ($)?</label>
+					<input type="text" id="food" name="food" class="form-input">
+				
+					<label for="drink" class="form-label">Name</label>
+					<input type="text" id="drink" name="drink" class="form-input">
+				
+					<input type="submit" value="Donate" class="form-submit" id="submit">
+				</form>
+      		
     		</div>
     		<div class="footer">
       			<img class="footerlogo-icon" alt="" src="./assets/svg/footerlogo.svg">
