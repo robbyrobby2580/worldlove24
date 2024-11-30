@@ -54,7 +54,7 @@ body {
     position: relative;
     font-size: 16px;
     line-height: 22px;
-    font-weight: 600;
+    font-weight: 400;
 }
 .htc {
     width: 100%;
@@ -391,6 +391,8 @@ body {
     padding-left: 16px;
     padding-right: 16px;
     box-sizing: border-box;
+    background-color: #f2f2f2;
+    color: #262626;
     
 }
 .form-input:focus {
