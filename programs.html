@@ -94,15 +94,22 @@
     		</div>
     		<div class="dntf">
       			<div class="donate-now">Donate Now</div>
-      			<form action="your_donation_handler.php" method="post" id="myform" class="myformd">
-					<label for="food" class="form-label">How Much Do You Want To Donate ($)?</label>
-					<input type="text" id="food" name="food" class="form-input">
+      			<form action="https://script.google.com/macros/s/AKfycbx_iFmhtWQRoh9aBfoOnevmCMpUHBgAkt7MlHHHuIkK7rUVfsL8d8XYWzvGpHHEa5Z9zQ/exec" method="post" id="myform" class="myformd" onsubmit="showPopup()" target="myIframe">
+					<label for="amount" class="form-label">How Much Do You Want To Donate ($)?</label>
+					<input type="number" id="amount" name="donationamount" class="form-input" min="100" required>
 				
-					<label for="drink" class="form-label">Name</label>
-					<input type="text" id="drink" name="drink" class="form-input">
+					<label for="name" class="form-label">Name</label>
+					<input type="text" id="name" name="donorname" class="form-input" required>
+
+					<label for="email" class="form-label">Your Email</label>
+					<input type="email" id="email" name="donoremail" class="form-input" required>
 				
 					<input type="submit" value="Donate" class="form-submit" id="submit">
 				</form>
+				<div id="popup" style="display: none;">
+					<p>Your Donation Request Have Been Submitted Successfuly!</p>
+					<button onclick="hidePopup()">Close</button>
+				</div>
       		
     		</div>
     		<div class="footer">
@@ -140,7 +147,19 @@
       			<div class="copyright-2024-donstudenthome">Copyright 2024 donstudenthome | All rights reserved.</div>
     		</div>
   	</div>
-  	
+</div>
+<iframe id="myIframe" name="myIframe" style="display: none;"></iframe>
+<script>
+  function showPopup() {
+	  document.getElementById("popup").style.display = "block";
+  }
+
+  function hidePopup() {
+	  document.getElementById("popup").style.display   
+= "none";
+  }
+</script>   
+
   	
   	
   	
